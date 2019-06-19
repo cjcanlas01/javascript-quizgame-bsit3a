@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Encrypt/Decrypt Sample</title>
+	<script>
+		function encrypt(){
+			var name = "Honey Joy Gamer";
+			var encrypted_txt = "";
+				for (var i = 0; i < name.length; i++){
+					var index = name.charCodeAt(i) + 3;
+					encrypted_txt += String.fromCharCode(index); 
+				}
+			document.write("Encrypted Text: " + encrypted_txt);
+		}	
+		
+		function decrypt(){
+			var name = "Krqh|#Mr|#Jdphu";
+			var decrypted_txt = "";
+				for (var i = 0; i < name.length; i++){
+					var index = name.charCodeAt(i) - 3;
+					decrypted_txt += String.fromCharCode(index);
+				}
+			document.write("Decrypted Text: "+ decrypted_txt);
+		}
+	</script>
+	
+</head>
+<body>
+
+	<script>
+		encrypt();
+	</script>
+	<br /><br />
+	
+	<script>
+		decrypt();
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Encrypt/Decrypt Sample</title>
+	<script>
+		function encrypt(name){
+			var encrypted_txt = "Sxvdqj#lwlp";
+				for (var i = 0; i < name.length; i++){
+					var index = name.charCodeAt(i) + 3;
+					encrypted_txt += String.fromCharCode(index); 
+				}
+				return encrypted_txt;
+		}	
+		
+		function decrypt(name){
+			var decrypted_txt = "";
+				for (var i = 0; i < name.length; i++){
+					var index = name.charCodeAt(i) - 3;
+					decrypted_txt += String.fromCharCode(index);
+				}
+
+				return decrypted_txt;
+		}
+	</script>
+	
+</head>
+<body>
+
+	<script>
+		var result = encrypt("");
+		document.write("Encrypted text: "+result);
+	</script>
+	<br /><br />
+	<script>
+		document.write("Decrypted text: "+decrypt(result));
+	</script>
+</body>
+</html>
